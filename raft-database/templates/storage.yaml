@@ -9,12 +9,3 @@ spec:
   imagePullPolicy: {{ .Values.image.pullPolicy }}
   replicas: {{ .Values.replicas }}
   partitionsPerCluster: {{ .Values.partitionsPerCluster }}
-  volumeClaimTemplates:
-    - metadata:
-        name: data
-      spec:
-          accessModes: [ "ReadWriteOnce" ]
-          storageClassName: "standard"
-          resources:
-            requests:
-              storage: 1Gi
